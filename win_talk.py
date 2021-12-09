@@ -6,14 +6,15 @@ from datetime import datetime
 
 
 def jtalk(t):
-    # depend on your install folder 
+    # depend on yo
+    # ur install folder 
     OPENJTALK_BINPATH = 'c:/open_jtalk/bin'
     OPENJTALK_DICPATH = 'c:/open_jtalk/dic'
     OPENJTALK_VOICEPATH = 'c:/open_jtalk/bin/mei_angry.htsvoice'
     open_jtalk=[OPENJTALK_BINPATH + '/open_jtalk.exe']
     mech=['-x',OPENJTALK_DICPATH]
     htsvoice=['-m',OPENJTALK_VOICEPATH]
-    speed=['-r','0.5']
+    speed=['-r','1.0']
     outwav=['-ow','open_jtalk.wav']
     cmd=open_jtalk+mech+htsvoice+speed+outwav
     c = subprocess.Popen(cmd,stdin=subprocess.PIPE)
@@ -24,7 +25,7 @@ def jtalk(t):
     c.wait()
 
     # play wav audio file with winsound module
-    winsound.PlaySound('futta-dream.wav', winsound.SND_FILENAME)
+    winsound.PlaySound('open_jtalk.wav', winsound.SND_FILENAME)
 
 
 def say_datetime():
