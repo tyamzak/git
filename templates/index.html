@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+
+</head>
+<body>
+    <form action="/" method="POST">
+        しゃべりたい言葉を書いて。<br>
+        <input type="text" name="speaker_text" size="30" maxlength="30">
+        <input type="submit" name="speaker_action" value="送信">
+        <br>
+        <input type="submit" name="camera_action" value="ON">
+        <input type="submit" name="camera_action" value="OFF">
+    </form>
+
+    <img src="http://192.168.1.78:8080/?action=stream" />
+</body>
+
+</html>
